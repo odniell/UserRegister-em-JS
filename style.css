@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+body{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(60deg, orangered, purple,rgb(255, 36, 73));
+    align-items: center;
+    background-attachment: fixed;
+}
+
+.container{
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(31, 31, 31);
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.63);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.boxInformacao{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.boxInputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.boxInputs i{
+    color: white;
+}
+
+.boxInputs input{
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 15px;
+    color: white;
+    
+}
+
+.boxBotao button{
+    padding: 10px 25px;
+    border: 2px solid white;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: transparent;
+    color: lightgray;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.596);
+    transition: 0.5s;
+}
+
+.boxBotao button:hover{
+    scale: 1.1;
+    background-color: orangered;
+    border: 2px solid transparent;
+}
+
+.boxInputs input:focus{
+    border: 2px solid transparent;
+    outline: 2px solid orangered;
+}
+
+.msg{
+    
+    flex-direction: column;
+    height: 150px;
+    margin: auto;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.boxUser{
+    display: grid;
+    width: 250px;
+    height: 120px;
+    background-color: rgb(31, 31, 31);
+    color: White;
+    text-align: left;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.596);   
+    margin-bottom: 15px;
+}
+
+.boxUser h3{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    align-items: center;
+}
+
+.boxUser p{
+    text-align: center;
+    justify-content: space-between;
+}
+
+#idade::before{
+    text-align: center;
+    content: "Idade: ";
+}
+
+#cpf::before{
+    text-align: center;
+    content: "CPF: ";
+}
+
+.boxUser button{
+    width: 70px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    grid-row-start: 1;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+
+    .msg{
+        display: block;
+        flex-direction: column;
+        height: 150px;
+        margin: auto;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .boxUser{
+        margin-bottom: 15px;
+    }
+}
